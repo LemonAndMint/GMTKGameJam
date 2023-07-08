@@ -4,15 +4,30 @@ using UnityEngine;
 
 public class BladeCollisionDetect : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
+    public SphereCollider sphereCollider;
+    private void OnTriggerEnter(Collider other) {
         
+        if(other.transform.tag == "Fruit"){
+
+            if(other.GetComponent<FruitCut>() == true){
+
+                other.GetComponent<FruitCut>().Cut();
+
+            }
+
+        }
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void CloseCollider(){
+
+        sphereCollider.enabled = false;
+
+    }
+
+    public void OpenCollider(){
+
+        sphereCollider.enabled = true;
+
     }
 }

@@ -10,6 +10,7 @@ public class BladeSequenceManager : MonoBehaviour
     void Start()
     {
         
+        GetComponent<BladeCollisionDetect>().CloseCollider();
         GetComponent<BladeEffects>().CloseTrailEffect();
         
         GetComponent<BladePositioning>().StartCalculate();
@@ -28,6 +29,7 @@ public class BladeSequenceManager : MonoBehaviour
         if(GetComponent<BladeMovement>().isMovementStarted == true){
 
             GetComponent<BladeEffects>().CloseIndicatorImage();
+            GetComponent<BladeCollisionDetect>().OpenCollider();
 
         }
         
