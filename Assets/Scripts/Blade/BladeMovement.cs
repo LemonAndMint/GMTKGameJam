@@ -22,27 +22,17 @@ public class BladeMovement : MonoBehaviour
     }
 
     private void Update() {
+       
+        if(timer > 0f){
 
-        if(isStarted == true){
-
-            if(timer > 0f){
-
-                timer -= Time.deltaTime;
-
-            }
-            else{
-
-                _movement();
-
-            }
+            timer -= Time.deltaTime;
 
         }
+        else{
 
-    }
+            _movement();
 
-    public void startMovement(){
-
-        isStarted = true;
+        }
 
     }
 

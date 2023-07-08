@@ -6,6 +6,9 @@ using UnityEngine.EventSystems;
 [RequireComponent(typeof(Rigidbody))]
 public class FruitMovement : MonoBehaviour
 {
+
+    public GameManager gameManager;
+
     [SerializeField]
     bool isGameStarted;
 
@@ -27,7 +30,7 @@ public class FruitMovement : MonoBehaviour
     private void OnMouseOver() {
         
         isGameStarted = true;
-
+        gameManager.isGameOn = true;
     }
     
     private void Update() {

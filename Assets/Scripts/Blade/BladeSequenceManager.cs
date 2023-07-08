@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class BladeSequenceManager : MonoBehaviour
 {
-
+    public ScoreManager scoreManager;
     private Vector3 endPointVector;
     // Start is called before the first frame update
     void Start()
     {
-        
+        GetComponent<BladeMovement>().enabled = false;
         GetComponent<BladeCollisionDetect>().CloseCollider();
         GetComponent<BladeEffects>().CloseTrailEffect();
         
@@ -20,7 +20,7 @@ public class BladeSequenceManager : MonoBehaviour
         GetComponent<BladeEffects>().InstantiateIndicator(endPointVector);
         GetComponent<BladeEffects>().OpenEffects();
 
-        GetComponent<BladeMovement>().startMovement();
+        GetComponent<BladeMovement>().enabled = true;
 
     }
 
@@ -43,8 +43,15 @@ public class BladeSequenceManager : MonoBehaviour
 
     private void _deactivateBlade(){
 
+        _increaseScore();
         GetComponent<BladeEffects>().DestroyIndicator();
         Destroy(gameObject);
+
+    }
+
+    private void _increaseScore(){
+
+        scoreManager.IncreaseScore();
 
     }
   

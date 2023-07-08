@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FruitCut : MonoBehaviour
 {
+    public GameManager gameManager;
     public GameObject fruitGFXGameObject;
     public GameObject piecesGameObject;
     public void Cut(){
@@ -13,6 +14,8 @@ public class FruitCut : MonoBehaviour
 
         GetComponentInChildren<FruitPieceExplode>().Explode();
         GetComponent<FruitMovement>().enabled = false;
+
+        gameManager.GameOver();
 
     }
 
