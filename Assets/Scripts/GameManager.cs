@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,9 +10,14 @@ public class GameManager : MonoBehaviour
     public AnimationCurve sliceTimeGraph;
     public AnimationCurve spawnTimeGraph;
     public AnimationCurve spawnAmountGraph;
+    public FruitMovement fruitMovement;
+
 
     
     private BladeSpawn bladeSpawn;
+    private UIManager uiManager;
+
+
     private int spawnAmount;
     private float sliceTimer;
     private float timer;
@@ -22,6 +28,9 @@ public class GameManager : MonoBehaviour
     {
 
         bladeSpawn = GetComponent<BladeSpawn>();
+        uiManager = GetComponent<UIManager>();
+
+        uiManager.StartPanelShow(); 
     
         isGameOn = false;
         timeEvaluated = 0;
@@ -66,17 +75,50 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public void SetGameOn(bool isOn){
+
+        isGameOn = isOn;
+        uiManager.StartPanelHide();
+        uiManager.ScoreBoardShow();
+
+    }
+
     public void GameOver(){
 
-        PauseGame();
+        DOTween.PauseAll();
+        isGameOn = false;
+        uiManager.GameOverPanelShow();
+        uiManager.ScoreBoardHide();
 
     }
 
     public void PauseGame(){
 
-        //#TODO
         DOTween.PauseAll();
         Time.timeScale = 0;
+        fruitMovement.enabled = false;
+        uiManager.PausePanelShow();
+
+    }
+
+    public void UnPauseGame(){
+
+        DOTween.PlayAll();
+        Time.timeScale = 1;
+        fruitMovement.enabled = true;
+        uiManager.PausePanelHide();
+
+    }
+
+    public void RestartGame(){
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+    }
+
+    public void ExitApplicaton(){
+
+        Application.Quit();
 
     }
 

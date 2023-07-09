@@ -19,7 +19,7 @@ public class BladeSpawn : MonoBehaviour
 
     }
 
-     private void _getCameraBoundaries(){ //https://discussions.unity.com/t/how-to-keep-object-from-going-off-screen/93736 \ Corpyr.
+    private void _getCameraBoundaries(){ //https://discussions.unity.com/t/how-to-keep-object-from-going-off-screen/93736 \ Corpyr.
         
         Vector3 bottomLeft = Camera.main.ScreenToWorldPoint(Vector3.zero);
 

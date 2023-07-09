@@ -14,6 +14,8 @@ public class FruitMovement : MonoBehaviour
 
     private Vector3 crusorPosInGame;
     private Rigidbody rb;
+    private Rect cameraRect;
+
 
     private void Awake() {
         
@@ -24,13 +26,18 @@ public class FruitMovement : MonoBehaviour
     private void Start() {
         
         rb = GetComponent<Rigidbody>();
+        _getCameraBoundaries();
 
     }
 
     private void OnMouseOver() {
         
-        isGameStarted = true;
-        gameManager.isGameOn = true;
+        if(isGameStarted == false){
+
+            isGameStarted = true;
+            gameManager.SetGameOn(true);
+        
+        }
     }
     
     private void Update() {
@@ -40,6 +47,20 @@ public class FruitMovement : MonoBehaviour
         
     }
 
+    private void _getCameraBoundaries(){ //https://discussions.unity.com/t/how-to-keep-object-from-going-off-screen/93736 \ Corpyr.
+        
+        Vector3 bottomLeft = Camera.main.ScreenToWorldPoint(Vector3.zero);
+
+        Vector3 topRight = Camera.main.ScreenToWorldPoint(new Vector3(
+            Camera.main.pixelWidth, Camera.main.pixelHeight));
+
+        cameraRect = new Rect( bottomLeft.x,
+                               bottomLeft.y,
+                               topRight.x - bottomLeft.x,
+                               topRight.y - bottomLeft.y);
+
+    }
+
     private void _movement(){
 
         if(isGameStarted == true){
@@ -47,7 +68,8 @@ public class FruitMovement : MonoBehaviour
             crusorPosInGame = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             crusorPosInGame = new Vector3(crusorPosInGame.x, crusorPosInGame.y, 0);
 
-            transform.position = crusorPosInGame;
+            transform.position = new Vector3( Mathf.Clamp(crusorPosInGame.x, cameraRect.xMin, cameraRect.xMax),
+                                              Mathf.Clamp(crusorPosInGame.y, cameraRect.yMin, cameraRect.yMax), 0 );
 
         }
 

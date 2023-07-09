@@ -47,10 +47,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.06
-  m_Height: 0.28
+  m_Radius: 0.07316401
+  m_Height: 0.27999997
   m_Direction: 2
-  m_Center: {x: 0, y: 0, z: 0.035}
+  m_Center: {x: 0, y: 0, z: 0.035000004}
 --- !u!54 &2907692348188662441
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -79,6 +79,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a97573cd05445294bbeed0cd06d33e6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   isGameStarted: 0
 --- !u!114 &6960818327617064183
 MonoBehaviour:
@@ -92,6 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99e03ac5cce65aa4aa81508ea4c52639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   fruitGFXGameObject: {fileID: 7973028700552964462}
   piecesGameObject: {fileID: 8001827822744548665}
 --- !u!1 &7973028700552964462
