@@ -12,11 +12,11 @@ public class GameManager : MonoBehaviour
 
     
     private BladeSpawn bladeSpawn;
-    private float sliceTimer;
     private int spawnAmount;
+    private float sliceTimer;
     private float timer;
-
     private float timeEvaluated;
+    private bool isGamePaused;
     
     void Start()
     {
@@ -29,13 +29,15 @@ public class GameManager : MonoBehaviour
         timer = spawnTimeGraph.Evaluate(timeEvaluated);
 
         spawnAmount = Mathf.RoundToInt(spawnAmountGraph.Evaluate(timeEvaluated));
+
+        isGamePaused = false;
     
     }
 
     void FixedUpdate()
     {
 
-        if(isGameOn == true){
+        if(isGameOn == true && isGamePaused == false){
 
             timeEvaluated += Time.deltaTime;
 
@@ -50,8 +52,9 @@ public class GameManager : MonoBehaviour
 
                 for(int i = 0; i <= spawnAmount - 1; i++){
 
+                    _pauseSpawn(); // oyunu durdurmak icin bos while actik. \ Corpyr
                     sliceTimer = sliceTimeGraph.Evaluate(timeEvaluated);
-                    bladeSpawn.Spawn(Random.Range(sliceTimer - 0.1f, sliceTimer + 0.1f));
+                    bladeSpawn.Spawn(Random.Range(sliceTimer - 1f, sliceTimer + 1));
 
                 }
 
@@ -65,15 +68,23 @@ public class GameManager : MonoBehaviour
 
     public void GameOver(){
 
-        Destroy(GetComponent<BladeSpawn>());
-        DOTween.PauseAll();
-        this.enabled = false;
+        PauseGame();
 
     }
 
     public void PauseGame(){
 
         //#TODO
+        DOTween.PauseAll();
+        Time.timeScale = 0;
+
+    }
+
+    private void _pauseSpawn(){
+
+        while(isGamePaused == true){
+
+        }
 
     }
 }
