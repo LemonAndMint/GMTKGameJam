@@ -273,7 +273,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.030000001, y: 0.7974599}
   m_AnchorMax: {x: 0.10700001, y: 0.95500004}
-  m_AnchoredPosition: {x: -0.50006104, y: -1}
+  m_AnchoredPosition: {x: -0.5001221, y: -1}
   m_SizeDelta: {x: 87.66, y: 83.9476}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &20752003
@@ -1274,7 +1274,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.3763634, y: 0.155}
   m_AnchorMax: {x: 0.52886325, y: 0.39665216}
-  m_AnchoredPosition: {x: -0.49998474, y: 0.8309479}
+  m_AnchoredPosition: {x: -0.49998474, y: 0.8309326}
   m_SizeDelta: {x: -0.9999, y: -1.3731003}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &665228004
@@ -1514,10 +1514,10 @@ RectTransform:
   m_Father: {fileID: 137836319}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.550509, y: 0.38262907}
-  m_AnchorMax: {x: 0.77950186, y: 0.6197419}
-  m_AnchoredPosition: {x: 1, y: -0.5}
-  m_SizeDelta: {x: -1.6609001, y: 0.79990005}
+  m_AnchorMin: {x: 0.550509, y: 0.38834557}
+  m_AnchorMax: {x: 0.77950186, y: 0.63100004}
+  m_AnchoredPosition: {x: 1, y: 1.3153992}
+  m_SizeDelta: {x: -1.6609001, y: -1.2001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &900476915
 MonoBehaviour:
@@ -1546,7 +1546,7 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 300
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1594,10 +1594,10 @@ RectTransform:
   m_Father: {fileID: 137836319}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.550509, y: 0.2}
-  m_AnchorMax: {x: 0.77950186, y: 0.356}
-  m_AnchoredPosition: {x: 1, y: -0.43380737}
-  m_SizeDelta: {x: -1.6609001, y: 0.46749878}
+  m_AnchorMin: {x: 0.550509, y: 0.21662906}
+  m_AnchorMax: {x: 0.77950186, y: 0.38834557}
+  m_AnchoredPosition: {x: 1, y: -0.30000305}
+  m_SizeDelta: {x: -1.6609001, y: -4.532501}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &987016590
 MonoBehaviour:
@@ -1632,7 +1632,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Tester: \nKumandanMiyav\nCenk"
+  m_Text: 'Translator: KumandanMiyav
+
+    Testers: KumandanMiyav, Cenk, Yasemin,
+    TYGN'
 --- !u!222 &987016591
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1726,7 +1729,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 54.55
+  m_fontSize: 62.4
   m_fontSizeBase: 59.97
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1812,7 +1815,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.35718918, y: 0.12281799}
+  m_AnchoredPosition: {x: -0.357193, y: 0.12281799}
   m_SizeDelta: {x: -0.2151947, y: 1.021164}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1160101492
@@ -2077,7 +2080,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.2674473, y: 0.21662906}
   m_AnchorMax: {x: 0.4881091, y: 0.3161526}
-  m_AnchoredPosition: {x: -0.92783356, y: 0.19999683}
+  m_AnchoredPosition: {x: -0.9278259, y: 0.19998169}
   m_SizeDelta: {x: -0.14429855, y: 1.9633026}
   m_Pivot: {x: 0.5, y: 0.49999988}
 --- !u!114 &1386981900
@@ -2105,8 +2108,8 @@ MonoBehaviour:
     m_FontSize: 26
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 26
+    m_MaxSize: 300
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -2613,7 +2616,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5385905, y: 0.155}
   m_AnchorMax: {x: 0.675, y: 0.38331455}
-  m_AnchoredPosition: {x: 1.1380005, y: -0.94799805}
+  m_AnchoredPosition: {x: 1.1380005, y: -0.9479828}
   m_SizeDelta: {x: 1.5920029, y: 1.3200073}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1766036680
@@ -3190,8 +3193,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f14eec7af826704396609e9285e98be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minRadius: 0
-  maxRadius: 4.5
   bladePrefab: {fileID: 8372531376444044230, guid: 59fd487fc2181f54aa711ab7926d2890, type: 3}
 --- !u!114 &2009635168
 MonoBehaviour:

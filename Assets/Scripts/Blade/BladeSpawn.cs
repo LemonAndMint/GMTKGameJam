@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class BladeSpawn : MonoBehaviour
 {
-    public float minRadius;
-    public float maxRadius;
     public GameObject bladePrefab;
 
     private Rect cameraRect;
@@ -45,8 +43,8 @@ public class BladeSpawn : MonoBehaviour
 
         //Clamp cozumu https://discussions.unity.com/t/how-to-keep-object-from-going-off-screen/93736 \ Corpyr
 
-        float endvectorx = Mathf.Clamp(spawnPositionVector.x + Random.Range(minRadius, maxRadius) * (Random.Range(0,2)*2-1), cameraRect .xMin, cameraRect .xMax);
-        float endvectory = Mathf.Clamp(spawnPositionVector.y + Random.Range(minRadius, maxRadius) * (Random.Range(0,2)*2-1), cameraRect .yMin, cameraRect .yMax);
+        float endvectorx = Mathf.Clamp(spawnPositionVector.x + Random.Range(cameraRect .xMin, cameraRect .xMax - 0.3f), cameraRect .xMin, cameraRect .xMax);
+        float endvectory = Mathf.Clamp(spawnPositionVector.y + Random.Range(cameraRect .yMin, cameraRect .xMax - 0.3f), cameraRect .yMin, cameraRect .yMax);
         
         return new Vector3(endvectorx , endvectory, 0); 
 
