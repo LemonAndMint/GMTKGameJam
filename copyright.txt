@@ -1,3 +1,26 @@
+In game Images
 'https://pngtree.com/so/red' red png from pngtree.com 
 "https://www.freepnglogos.com/pics/circle" Circle from freepnglogos.com
-"https://game-icons.net/1x1/guard13007/pause-button.html" By Guard13007
+
+Knife Sounds
+https://freesound.org/people/beerbelly38/sounds/362350/
+https://freesound.org/people/beerbelly38/sounds/362349/
+https://freesound.org/people/beerbelly38/sounds/362348/
+
+Fruit cut
+https://freesound.org/people/aarrnnoo/sounds/516191/
+
+UI Elements
+https://assetstore.unity.com/packages/2d/gui/icons/sleek-essential-ui-pack-170650
+https://game-icons.net/1x1/guard13007/pause-button.html
+https://game-icons.net/1x1/delapouite/info.html
+https://game-icons.net/1x1/lord-berandas/power-button.html
+https://game-icons.net/1x1/sbed/cancel.html
+https://game-icons.net/1x1/delapouite/clockwise-rotation.html
+https://game-icons.net/1x1/skoll/click.html
+
+Background
+https://github.com/zigurous/unity-fruit-ninja-tutorial/blob/main/Assets/Textures/Wood.png
+
+Fruit Model
+https://www.reddit.com/r/Unity3D/comments/kszwtc/free_assets_fruits_vegetables/

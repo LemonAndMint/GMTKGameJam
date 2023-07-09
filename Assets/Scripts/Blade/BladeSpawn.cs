@@ -36,7 +36,7 @@ public class BladeSpawn : MonoBehaviour
     private Vector3 _getSpawnPoint(){
 
         _getCameraBoundaries();
-        float radius = Random.Range(minRadius, maxRadius);
+        //float radius = Random.Range(minRadius, maxRadius);
 
         Vector3 spawnPositionVector = transform.position;
 
@@ -45,8 +45,8 @@ public class BladeSpawn : MonoBehaviour
 
         //Clamp cozumu https://discussions.unity.com/t/how-to-keep-object-from-going-off-screen/93736 \ Corpyr
 
-        float endvectorx = Mathf.Clamp(spawnPositionVector.x + Random.Range(minRadius, radius) * (Random.Range(0,2)*2-1), cameraRect .xMin, cameraRect .xMax);
-        float endvectory = Mathf.Clamp(spawnPositionVector.y + Random.Range(minRadius, radius) * (Random.Range(0,2)*2-1), cameraRect .yMin, cameraRect .yMax);
+        float endvectorx = Mathf.Clamp(spawnPositionVector.x + Random.Range(minRadius, maxRadius) * (Random.Range(0,2)*2-1), cameraRect .xMin, cameraRect .xMax);
+        float endvectory = Mathf.Clamp(spawnPositionVector.y + Random.Range(minRadius, maxRadius) * (Random.Range(0,2)*2-1), cameraRect .yMin, cameraRect .yMax);
         
         return new Vector3(endvectorx , endvectory, 0); 
 

@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
 
                     _pauseSpawn(); // oyunu durdurmak icin bos while actik. \ Corpyr
                     sliceTimer = sliceTimeGraph.Evaluate(timeEvaluated);
-                    bladeSpawn.Spawn(Random.Range(sliceTimer - 1f, sliceTimer + 1));
+                    bladeSpawn.Spawn(Random.Range(sliceTimer - 0.1f, sliceTimer + 0.2f));
 
                 }
 

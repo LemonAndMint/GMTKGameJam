@@ -32,7 +32,7 @@ public class FruitMovement : MonoBehaviour
 
     private void OnMouseOver() {
         
-        if(isGameStarted == false){
+        if(isGameStarted == false && this.enabled == true){
 
             isGameStarted = true;
             gameManager.SetGameOn(true);

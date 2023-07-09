@@ -30,7 +30,11 @@ public class BladeMovement : MonoBehaviour
         }
         else{
 
-            _movement();
+            if(isMovementStarted == false){
+            
+                _movement();
+            
+            }
 
         }
 
@@ -40,6 +44,7 @@ public class BladeMovement : MonoBehaviour
 
         isMovementStarted = true;
 
+        GetComponent<SoundPlay>().PlayRandomSound();
         transform.DOMove(endPosition, 0.5f).SetEase(Ease.OutExpo).OnComplete(() => { transform.DOKill(); isEnded = true; });
 
     }
